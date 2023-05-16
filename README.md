@@ -52,4 +52,6 @@ e) You can create a dynamic discount code using Shopify PHPSDK and Omnisend APIs
 		    )
 		);
 
-c) You can send email using phpmailer to register customer.
+c) You can send email using phpmailer to register customer. Please install phpmailer to your PHP server.
+
+composer require phpmailer/phpmailer
