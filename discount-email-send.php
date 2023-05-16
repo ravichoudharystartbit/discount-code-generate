@@ -105,8 +105,8 @@ $contacts = $omnisenddata->post(
 );
 
 if ($contacts) {        
-    $return_data['success'] = 'true'; 
-    $return_data['discount_code'] = $final_discount_code;
+    $returndata['success'] = 'true'; 
+    $returndata['discount_code'] = $final_discount_code;
 
     $mail = new PHPMailer(true);
 
@@ -143,13 +143,13 @@ if ($contacts) {
      //   echo '<br>';
     }
 
-    array_push($discount_array,$return_data);
+    array_push($discount_array,$returndata);
     echo json_encode($discount_array);
 } else {  
     print_r($omnisend->lastError());
-    $return_data['success'] = 'false'; 
-    $return_data['discount_code'] = ''; 
-    array_push($discount_array,$return_data);
+    $returndata['success'] = 'false'; 
+    $returndata['discount_code'] = ''; 
+    array_push($discount_array,$returndata);
     echo json_encode($discount_array);
 }
 ?>
