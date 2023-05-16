@@ -13,7 +13,7 @@ c) You need to install PHPmailer on your PHP server.
 d) You can get the ajax varaible value according to your requirement. You can send all varaibles value from ajax on your PHP server URL.
 
 e) You can create a dynamic discount code using Shopify PHPSDK and Omnisend APIs.
-		$discount_code = $shopify->PriceRule($price_rule_id)->DiscountCode()->post([      
+		$discount_code = $shopify->PriceRule($priceruleid)->DiscountCode()->post([      
 		"code" => $discount_title   
 		]);
 
@@ -32,7 +32,7 @@ e) You can create a dynamic discount code using Shopify PHPSDK and Omnisend APIs
 		                "id" => $email,
 		                "channels" => array(
 		                 "email" => array(
-		                      "status" => $email_value,
+		                      "status" => $emailvalue,
 		                      "statusDate" => $date
 		                    )
 		                )                         
@@ -42,7 +42,7 @@ e) You can create a dynamic discount code using Shopify PHPSDK and Omnisend APIs
 		                "id" => $phone,
 		                "channels" => array(
 		                 "sms" => array(
-		                      "status" => $phone_value,
+		                      "status" => $phonevalue,
 		                      "statusDate" => $date
 		                    )
 		                )
